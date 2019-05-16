@@ -44,10 +44,9 @@ def all_cubes_greater_than_500(array)
   # return all the numbers from the input array whose cube is greater than 500
   num_arr =[]
   array.each do|number|
-       if number ** 3 > 500
+       if number ** 3 < 500
         num_arr << number
-        binding.pry
-        4
+        # binding.pry
       end
     end
     num_arr
@@ -55,9 +54,23 @@ end
 
 def sum(array)
   # return the sum of all integers from the input array
-  array.reduce{|sum, num| sum += num}
+  array.reduce{|sum, num| sum +num}
 end
+
+#_________________________________________________________________________________________
+#a tad bit of laziness 
+
+def sum(array)
+  total = 0
+  array.each do|digit|
+      total +=digit
+  end
+  total
+end
+
+#-------------------------------------------------------------------------------------------
 
 def average_value(array)
   # return the average of all integers from the input array
+  sum(num).to_f/arr.length
 end
