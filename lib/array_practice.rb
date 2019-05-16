@@ -42,7 +42,9 @@ end
 
 def all_cubes_greater_than_500(array)
   # return all the numbers from the input array whose cube is greater than 500
-  array.map{|number|number ** 3 > 500}
+  array.map do|number|
+       if number ** 3 > 500
+      end
   #  binding.pry
   #  us
 end
